@@ -11,7 +11,7 @@ try {
   }
   const fontData = await fetchFontInformation(fontName);
   consola.info("fontData", fontData);
-  const bunnySpec = await generateBunnyFontSpec(fontData);
+  const bunnySpec = generateBunnyFontSpec(fontData);
   const serialized = JSON.stringify(bunnySpec, null, 2);
   consola.info("bunnySpec", serialized);
   const outPath = `./out/${fontName.replace(/\s+/g, "_")}.json`;
